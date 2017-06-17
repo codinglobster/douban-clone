@@ -77,7 +77,7 @@ const  actions = {
           reject(err)
         })
     })
-  }
+  },
 
   register ({ commit }, payload) {
     return new Promise((resolve, reject) => {

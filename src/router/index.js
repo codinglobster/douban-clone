@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import PagesView from '../views/PagesView.vue'
+import HomeView from '../views/HomeView.vue'
 
 Vue.use(Router)
 
@@ -14,18 +15,18 @@ export default new Router({
     {
       path:'/pages',
       name:'HomeView',
-      component: PagesView
-      // children: [
-      //   {
-      //     path:'',
-      //     redirect: '/pages/home'
-      //   },
-      //   {
-      //     path:'home',
-      //     name:'HomeView',
-      //     component: HomeView
-      //   }
-      // ]
+      component: PagesView,
+      children: [
+        {
+          path:'',
+          redirect: '/pages/home'
+        },
+        {
+          path:'home',
+          name:'HomeView',
+          component: HomeView
+        }
+      ]
     }
   ]
 })

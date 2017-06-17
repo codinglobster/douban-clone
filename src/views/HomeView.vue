@@ -1,6 +1,6 @@
 <template>
   <div class="home-view has-header">
-    <sub-nav mold=""quickNav></sub-nav>
+    <sub-nav mold="quickNav"></sub-nav>
     <list mold="thumbnail" :items="events"></list>
 
   </div>
